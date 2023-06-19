@@ -4,7 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d15dce4e-64d8-4ebc-b387-5bf6c1c9fcc3" name="Changes" comment="" />
+    <list default="true" id="5d596665-dc73-4b5c-ad0e-91231b5a4433" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ung_dung_tu_dien/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/src/main/java/com/example/chuyendoitiente/ChangeMoneyServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/src/main/java/com/example/chuyendoitiente/ChuyenDoiTienTeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/src/main/webapp/ChuyenDoiTienTe.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/src/main/java/TuDienThucHanhServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/calculator/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +59,7 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="calculator" type="f1a62948:ProjectNode" />
+                <item name="ung-dung-tu-dien" type="f1a62948:ProjectNode" />
               </path>
             </expand>
             <select />
@@ -61,49 +97,42 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2RK50MHB2wdaBq4p4EQCCMd1CfW" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2REZ76ad2IFjtXWZN4PxwSp3WFT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Codegym/Module4/module-4/ss1/ung_dung_tu_dien",
+    "last_opened_file_path": "D:/Codegym/Module4/module-4/ss1/ung-dung-tu-dien",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "spring.configuration.checksum": "5b202712e84cb9331e0116991c784294",
+    "spring.configuration.checksum": "fcfbf9b4de5fdf0a2f59b7631c2b8e1d",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Codegym\Module4\module-4\ss2\calculator\src\main\webapp\WEB-INF\view" />
+      <recent name="D:\Codegym\module3x\module3x\module3\demoTomcat\ung-dung-tu-dien\src\main\webapp\WEB-INF\views" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.753" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.753" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="hot-swap-classes" />
       <deployment>
-        <artifact name="Gradle : com.example : calculator-1.0-SNAPSHOT.war">
+        <artifact name="Gradle : com.example : ung-dung-tu-dien-1.0-SNAPSHOT.war">
           <settings>
             <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="9d793547-aedc-4c08-8438-578eab1d22fc" />
+        <option name="BASE_DIRECTORY_NAME" value="7aa1ee7d-d90a-4be2-a2db-254d61a8a034" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -111,7 +140,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51191" />
+        <option name="DEBUG_PORT" value="54442" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -176,7 +205,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="Gradle : com.example : calculator-1.0-SNAPSHOT.war" />
+          <artifact name="Gradle : com.example : ung-dung-tu-dien-1.0-SNAPSHOT.war" />
         </option>
       </method>
     </configuration>
@@ -184,21 +213,20 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d15dce4e-64d8-4ebc-b387-5bf6c1c9fcc3" name="Changes" comment="" />
-      <created>1686985709054</created>
+      <changelist id="5d596665-dc73-4b5c-ad0e-91231b5a4433" name="Changes" comment="" />
+      <created>1686817032219</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1686985709054</updated>
-      <workItem from="1686985710233" duration="781000" />
-      <workItem from="1686986579540" duration="27000" />
-      <workItem from="1687144780930" duration="1266000" />
+      <updated>1686817032219</updated>
+      <workItem from="1686817033368" duration="4063000" />
+      <workItem from="1686822561854" duration="231000" />
+      <workItem from="1686983878300" duration="1799000" />
+      <workItem from="1687145050959" duration="393000" />
+      <workItem from="1687146226533" duration="61000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
