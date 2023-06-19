@@ -4,7 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d15dce4e-64d8-4ebc-b387-5bf6c1c9fcc3" name="Changes" comment="" />
+    <list default="true" id="d15dce4e-64d8-4ebc-b387-5bf6c1c9fcc3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/src/main/java/com/example/chuyendoitiente/ChangeMoneyServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/src/main/java/com/example/chuyendoitiente/ChuyenDoiTienTeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/src/main/webapp/ChuyenDoiTienTe.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/chuyen-doi-tien-te/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/src/main/java/TuDienThucHanhServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss1/ung_dung_tu_dien/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +49,23 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="calculator" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,7 +110,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Codegym/Module4/module-4/ss2/demo4",
+    "last_opened_file_path": "D:/Codegym/module3x/module3x/module3/demoTomcat/chuyen_doi_tien_te",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -174,6 +226,7 @@
       <updated>1686985709054</updated>
       <workItem from="1686985710233" duration="781000" />
       <workItem from="1686986579540" duration="27000" />
+      <workItem from="1687144780930" duration="656000" />
     </task>
     <servers />
   </component>
