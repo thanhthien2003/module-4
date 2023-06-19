@@ -24,6 +24,11 @@ public class CalculatorControler {
         if (number1 == null || number2 == null || calculate == ""){
             return "index";
         }
+        if (number2 == 0 & calculate.equals("divi")){
+            String resultEror = "Cannot divide by zero number";
+            model.addAttribute("result",resultEror);
+            return "index";
+        }
         double result = calculatorService.calculate(number1,number2,calculate);
         model.addAttribute("result",result);
         return "index";
