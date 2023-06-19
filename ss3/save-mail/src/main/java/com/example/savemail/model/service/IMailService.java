@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface IMailService {
     List<Mail> display();
+
     boolean add(Mail mail);
-    boolean edit(int id);
+
+    boolean edit(Mail mail);
 }

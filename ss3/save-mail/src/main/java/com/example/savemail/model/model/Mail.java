@@ -9,7 +9,7 @@ public class Mail {
     public Mail() {
     }
 
-    public Mail(int id,String languages, int pageSize, boolean spamsFilter, String signature) {
+    public Mail(int id, String languages, int pageSize, boolean spamsFilter, String signature) {
         this.id = id;
         this.languages = languages;
         this.pageSize = pageSize;

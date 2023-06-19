@@ -23,7 +23,7 @@ public class MailService implements IMailService {
     }
 
     @Override
-    public boolean edit(int id) {
-        return false;
+    public boolean edit(Mail mail) {
+        return mailRepository.edit(mail);
     }
 }

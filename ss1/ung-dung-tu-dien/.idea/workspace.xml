@@ -4,43 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d596665-dc73-4b5c-ad0e-91231b5a4433" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ung_dung_tu_dien/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/src/main/java/com/example/chuyendoitiente/ChangeMoneyServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/src/main/java/com/example/chuyendoitiente/ChuyenDoiTienTeServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/src/main/webapp/ChuyenDoiTienTe.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chuyen-doi-tien-te/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/src/main/java/TuDienThucHanhServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_tu_dien/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss2/calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/calculator/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5d596665-dc73-4b5c-ad0e-91231b5a4433" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +71,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Codegym/Module4/module-4/ss1/ung-dung-tu-dien",
+    "last_opened_file_path": "D:/Codegym/Module4/module-4/ss2/demo4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -223,6 +187,7 @@
       <workItem from="1686983878300" duration="1799000" />
       <workItem from="1687145050959" duration="393000" />
       <workItem from="1687146226533" duration="61000" />
+      <workItem from="1687160325570" duration="19000" />
     </task>
     <servers />
   </component>

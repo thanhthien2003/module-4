@@ -2,11 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>JSP - Mail</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
 <br/>
 <a href="/displayList">Go Mail List</a>
 </body>
