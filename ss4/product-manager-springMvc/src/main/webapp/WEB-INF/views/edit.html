@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<form action="/edit" method="post" th:object="${product}">
+    <div>
+        <input type="text" hidden th:field="*{id}">
+    </div>
+    <div>
+        <label for="name">Name: </label>
+        <input type="text" id="name" th:field="*{name}">
+    </div>
+    <div>
+        <label for="price">Price: </label>
+        <input type="number" id="price" min="0" th:field="*{price}">
+    </div>
+    <div>
+        <label for="discribe">Discribe: </label>
+        <textarea id="discribe" th:field="*{status}"></textarea>
+    </div>
+    <div>
+        <label for="producer">Producer: </label>
+        <input type="text" id="producer" th:field="*{producer}">
+    </div>
+    <a th:href="@{/}">back</a>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

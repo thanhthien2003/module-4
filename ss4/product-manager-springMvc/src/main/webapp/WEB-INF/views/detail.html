@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Producer</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${product.getId()}"></td>
+        <td th:text="${product.getName()}"></td>
+        <td th:text="${product.getPrice()}"></td>
+        <td th:text="${product.getStatus()}"></td>
+        <td th:text="${product.getProducer()}"></td>
+    </tr>
+    </tbody>
+</table>
+<a th:href="@{/}">Turn back list product</a>
+</body>
+</html>
