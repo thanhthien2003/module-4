@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public class MailRepository implements IMailRepository {
-    static List<Mail> mailList = new ArrayList<>();
+   private static List<Mail> mailList = new ArrayList<>();
 
     static {
         mailList.add(new Mail(1, "Vietnamese", 25, true, "awdiooawid"));

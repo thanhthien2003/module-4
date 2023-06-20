@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class ProductControler {
     @Autowired
-    IProductService productService;
+   private IProductService productService;
 
     @RequestMapping("")
     public String getListProduct(Model model) {
@@ -27,51 +27,55 @@ public class ProductControler {
 
     @GetMapping("/showFormEdit")
     public String showFormEdit(@RequestParam("idEdit") int id, Model model) {
-        for (Product p:productService.display()) {
-            if (p.getId()==id){
-                model.addAttribute("product",p);
+        for (Product p : productService.display()) {
+            if (p.getId() == id) {
+                model.addAttribute("product", p);
                 break;
             }
         }
-    return "/edit";
+        return "/edit";
     }
+
     @PostMapping("/edit")
-    public String edit(@ModelAttribute Product product,RedirectAttributes redirectAttributes){
-        if (productService.edit(product)){
-            redirectAttributes.addFlashAttribute("msg","Edit done");
+    public String edit(@ModelAttribute Product product, RedirectAttributes redirectAttributes) {
+        if (productService.edit(product)) {
+            redirectAttributes.addFlashAttribute("msg", "Edit done");
         } else {
-            redirectAttributes.addFlashAttribute("msg","Can't not Edit");
+            redirectAttributes.addFlashAttribute("msg", "Can't not Edit");
         }
         return "redirect:/";
     }
 
     @GetMapping("/showFormCreate")
-    public String showFormCreate(Model model){
+    public String showFormCreate(Model model) {
         Product product = new Product();
-        model.addAttribute("product",product);
+        model.addAttribute("product", product);
         return "/create";
     }
+
     @PostMapping("/create")
-    public String create(@ModelAttribute Product product, RedirectAttributes redirectAttributes){
-        if (productService.create(product)){
-            redirectAttributes.addFlashAttribute("msg","Create done");
+    public String create(@ModelAttribute Product product, RedirectAttributes redirectAttributes) {
+        if (productService.create(product)) {
+            redirectAttributes.addFlashAttribute("msg", "Create done");
         } else {
-            redirectAttributes.addFlashAttribute("msg","Can't not create,The id exist");
+            redirectAttributes.addFlashAttribute("msg", "Can't not create,The id exist");
         }
         return "redirect:/";
     }
+
     @PostMapping("/delete")
-    public String delete(@RequestParam("idDelete") int id,RedirectAttributes redirectAttributes){
-        if (productService.delete(id)){
-            redirectAttributes.addFlashAttribute("msg","Delete done");
+    public String delete(@RequestParam("idDelete") int id, RedirectAttributes redirectAttributes) {
+        if (productService.delete(id)) {
+            redirectAttributes.addFlashAttribute("msg", "Delete done");
         } else {
-            redirectAttributes.addFlashAttribute("msg","Can't not delete");
+            redirectAttributes.addFlashAttribute("msg", "Can't not delete");
         }
         return "redirect:/";
     }
+
     @GetMapping("/search")
-    public String searchByName(@RequestParam("search") String name,Model model){
-        model.addAttribute("productList",productService.findByName(name));
+    public String searchByName(@RequestParam("search") String name, Model model) {
+        model.addAttribute("productList", productService.findByName(name));
         return "/list";
     }
 }

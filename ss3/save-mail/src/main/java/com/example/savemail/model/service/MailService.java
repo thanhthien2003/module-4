@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class MailService implements IMailService {
     @Autowired
-    IMailRepository mailRepository;
+   private IMailRepository mailRepository;
 
     @Override
     public List<Mail> display() {

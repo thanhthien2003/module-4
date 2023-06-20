@@ -12,14 +12,14 @@
 <body>
 <a th:href="@{/showFormCreate}">Create new product</a>
 <p>
-   <div th:if="${msg!=null}" th:text="${msg}"></div>
+<div th:if="${msg!=null}" th:text="${msg}"></div>
 </p>
 <form action="/search" method="get">
     <input type="text" name="search" placeholder="Enter name ">
     <button type="submit">Search</button>
 </form>
-<table  class="table table-bordered" id="tableStudent" style="width:100%;background-color: #dee6ee">
-    <thead  style="background-color: #8491bb">
+<table class="table table-bordered" id="tableStudent" style="width:100%;background-color: #dee6ee">
+    <thead style="background-color: #8491bb">
     <tr>
         <th>Id</th>
         <th>Name</th>

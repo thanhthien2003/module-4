@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class ProductService implements IProductService {
     @Autowired
-    IProductRepo productRepo;
+    private IProductRepo productRepo;
 
     @Override
     public List<Product> display() {

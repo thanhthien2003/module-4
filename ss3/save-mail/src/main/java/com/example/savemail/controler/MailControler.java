@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class MailControler {
     @Autowired
-    IMailService mailService;
+   private IMailService mailService;
 
     @GetMapping("/displayList")
     public String display(Model model) {
