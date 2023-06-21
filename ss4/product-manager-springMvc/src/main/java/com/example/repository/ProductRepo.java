@@ -1,44 +1,74 @@
 package com.example.repository;
 
 import com.example.model.Product;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.TypedQuery;
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository
 public class ProductRepo implements IProductRepo {
-    private static List<Product> productList = new ArrayList<>();
-
-    static {
-        productList.add(new Product(1, "iphone 14", 20000, "Apple product", "Apple"));
-        productList.add(new Product(2, "Samsung 14", 220000, "Samsung product", "Samsung"));
-        productList.add(new Product(3, "Viphone 14", 10000, "Viphone product", "Viphone"));
-        productList.add(new Product(4, "Macbook 14", 400000, "Apple product", "Apple"));
-        productList.add(new Product(5, "Redmi 14", 240000, "Xiaomi product", "Xiaomi"));
-    }
+    private static final String SELECT_ALL_PRODUCT_QUERY = "SELECT p FROM Product as p";
 
     @Override
     public List<Product> display() {
-        return productList;
+        return ConnectionUtils.getEntityManager().createQuery(SELECT_ALL_PRODUCT_QUERY).getResultList();
     }
 
     @Override
     public boolean create(Product product) {
-        for (Product p : productList) {
+        for (Product p : display()) {
             if (product.getId() == p.getId()) {
                 return false;
             }
         }
-        productList.add(product);
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            session = ConnectionUtils.getSessionFactory().openSession();
+            transaction = session.beginTransaction();
+            session.save(product);
+            transaction.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            return false;
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
         return true;
     }
 
     @Override
     public boolean delete(int id) {
-        for (Product p : productList) {
+        for (Product p : display()) {
             if (p.getId() == id) {
-                productList.remove(p);
+                Session session = null;
+                Transaction transaction = null;
+                try {
+                    session = ConnectionUtils.getSessionFactory().openSession();
+                    transaction = session.beginTransaction();
+                    session.delete(p);
+                    transaction.commit();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    if (transaction != null) {
+                        transaction.rollback();
+                    }
+                    return false;
+                } finally {
+                    if (session != null) {
+                        session.close();
+                    }
+                }
                 return true;
             }
         }
@@ -47,29 +77,40 @@ public class ProductRepo implements IProductRepo {
 
     @Override
     public boolean edit(Product product) {
-        for (int i = 0; i < productList.size(); i++) {
-            if (product.getId() == productList.get(i).getId()) {
-                productList.set(i, product);
-                return true;
+        Session session = null;
+        Transaction transaction = null;
+
+        Product oldProduct = this.findById(product.getId());
+        try {
+            session = ConnectionUtils.getSessionFactory().openSession();
+            transaction = session.beginTransaction();
+            BeanUtils.copyProperties(product, oldProduct);
+            session.update(oldProduct);
+            transaction.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            return false;
+        } finally {
+            if (session != null) {
+                session.close();
             }
         }
-        return false;
+        return true;
     }
 
     @Override
     public List<Product> findByName(String name) {
-        List<Product> productListFind = new ArrayList<>();
-        for (Product p : productList) {
-            if (p.getName().contains(name)) {
-                productListFind.add(p);
-            }
-        }
-        return productListFind;
+        String queryStr = "SELECT c FROM Product AS c WHERE c.name like concat('%', :name, '%')";
+        List<Product> productList = ConnectionUtils.getEntityManager().createQuery(queryStr).setParameter("name", name).getResultList();
+        return productList;
     }
 
     @Override
     public Product getDetailProduct(int id) {
-        for (Product p : productList) {
+        for (Product p : display()) {
             if (id == p.getId()) {
                 return p;
             }
@@ -79,11 +120,10 @@ public class ProductRepo implements IProductRepo {
 
     @Override
     public Product findById(int id) {
-        for (Product p : productList) {
-            if (p.getId() == id) {
-                return p;
-            }
+        try {
+            return (Product) ConnectionUtils.getEntityManager().createQuery("select p from Product as p where p.id =" + id).getSingleResult();
+        } catch (Exception e) {
+            return null;
         }
-        return null;
     }
 }
