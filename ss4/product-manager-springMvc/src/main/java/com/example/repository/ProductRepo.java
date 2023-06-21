@@ -76,4 +76,14 @@ public class ProductRepo implements IProductRepo {
         }
         return null;
     }
+
+    @Override
+    public Product findById(int id) {
+        for (Product p : productList) {
+            if (p.getId() == id) {
+                return p;
+            }
+        }
+        return null;
+    }
 }

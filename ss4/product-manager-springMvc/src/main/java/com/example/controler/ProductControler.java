@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class ProductControler {
     @Autowired
-   private IProductService productService;
+    private IProductService productService;
 
     @RequestMapping("")
     public String getListProduct(Model model) {
@@ -27,12 +27,7 @@ public class ProductControler {
 
     @GetMapping("/showFormEdit")
     public String showFormEdit(@RequestParam("idEdit") int id, Model model) {
-        for (Product p : productService.display()) {
-            if (p.getId() == id) {
-                model.addAttribute("product", p);
-                break;
-            }
-        }
+        model.addAttribute("product", productService.findById(id));
         return "/edit";
     }
 

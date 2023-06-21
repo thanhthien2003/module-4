@@ -41,4 +41,9 @@ public class ProductService implements IProductService {
     public Product getDetailProduct(int id) {
         return productRepo.getDetailProduct(id);
     }
+
+    @Override
+    public Product findById(int id) {
+        return productRepo.findById(id);
+    }
 }
