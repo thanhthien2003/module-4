@@ -10,12 +10,16 @@
     <link rel="stylesheet" href="datatables/css/dataTables.bootstrap5.min.css"/>
 </head>
 <body>
-<a th:href="@{/blog/create}" >
+<a th:href="@{/blog/create}">
     <button>Create new</button>
 </a>
 <p>
 <div th:if="${msg!=null}" th:text="${msg}"></div>
 </p>
+<form th:action="@{/blog/search}" method="get">
+    <input type="text" name="title" placeholder="Enter name ">
+    <button type="submit">Search</button>
+</form>
 <table class="table table-bordered" id="tableStudent" style="width:100%;background-color: #dee6ee">
     <thead style="background-color: #8491bb">
     <tr>
@@ -23,20 +27,22 @@
         <th>Title</th>
         <th>Heading</th>
         <th>Date Submitted</th>
+        <td> Category</td>
         <td>Detail</td>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="blog, iterStats : ${blogList}">
+    <tr th:each="blog, iterStats : ${blogList}" th:if="${blog.isFlagDelete()}">
         <td th:text="${iterStats.count}"></td>
         <td th:text="${blog.getTitle()}"></td>
         <td th:text="${blog.getHeading()}"></td>
         <td th:text="${blog.getDateSubmitted()}"></td>
+        <td th:text="${blog.getCategory().name}"></td>
         <td>
             <a th:href="@{/blog/detail/{id}(id=${blog.getId()})}">
-                <button> Detail </button>
+                <button> Detail</button>
             </a>
         </td>
         <td>
@@ -46,12 +52,20 @@
         </td>
         <td>
             <a th:href="@{/blog/delete/{id}(id=${blog.getId()})}">
-                <button> Delete </button>
+                <button> Delete</button>
             </a>
         </td>
     </tr>
     </tbody>
 </table>
+<div>
+    <a th:if="${blogList.hasPrevious()}" th:href="@{/blog(page=${blogList.number -1})}">
+        Previous
+    </a>
+    <a th:if="${blogList.hasNext()}" th:href="@{/blog(page=${blogList.number + 1})}">
+        Next
+    </a>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>

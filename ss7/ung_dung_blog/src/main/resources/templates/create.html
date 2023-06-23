@@ -14,6 +14,13 @@
     <br>
     Content: <textarea th:field="*{content}"></textarea>
     <br>
+    Danh mục:
+    <select id="category" th:field="*{category}">
+        <option th:each="category : ${categorys}"
+                th:text="${category.name}" th:value="${category.id}">
+        </option>
+    </select>
+    <br>
     <a th:href="@{/blog}">Back</a>
     <br>
     <button type="submit">Submit</button>

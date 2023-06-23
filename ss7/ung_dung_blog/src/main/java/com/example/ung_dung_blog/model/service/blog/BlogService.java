@@ -1,19 +1,20 @@
-package com.example.ung_dung_blog.model.service;
+package com.example.ung_dung_blog.model.service.blog;
 
 import com.example.ung_dung_blog.model.model.Blog;
 import com.example.ung_dung_blog.model.repository.IBlogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
-public class BlogService implements IBlogService{
+public class BlogService implements IBlogService {
     @Autowired
     private IBlogRepository blogRepository;
+
     @Override
-    public List<Blog> displayBlog() {
-        return blogRepository.findAll();
+    public Page<Blog> findAll(Pageable pageable) {
+        return blogRepository.findAll(pageable);
     }
 
     @Override
@@ -33,7 +34,12 @@ public class BlogService implements IBlogService{
 
     @Override
     public boolean deleteBlog(Blog blog) {
-        blogRepository.delete(blog);
+        blogRepository.isDelete(blog.getId());
         return true;
+    }
+
+    @Override
+    public Page<Blog> findByTitle(Pageable pageable, String title) {
+        return blogRepository.findByTitle(pageable,title);
     }
 }
