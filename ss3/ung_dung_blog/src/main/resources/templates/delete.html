@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Delete</title>
+</head>
+<body>
+<form th:action="@{/blog/delete}" method="post" th:object="${blog}">
+    <p>Are you sure delete this blog? </p>
+    <input type="text" th:field="*{id}" hidden>
+    <br>
+    Title: <input type="text" th:field="*{title}" readonly>
+    <br>
+    Heading: <input type="text" th:field="*{heading}" readonly>
+    <br>
+    Date Submitted: <input type="date" th:field="*{dateSubmitted}" readonly>
+    <br>
+    Content: <textarea th:field="*{content}" readonly></textarea>
+    <br>
+    <a th:href="@{/blog}">Back</a>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

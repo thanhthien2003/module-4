@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Blog</title>
+</head>
+<body>
+<form th:action="@{/blog/update}" method="post" th:object="${blog}">
+    <input type="text" th:field="*{id}" hidden>
+    Title: <input type="text" th:field="*{title}">
+    <br>
+    Heading: <input type="text" th:field="*{heading}">
+    <br>
+    Date Submitted: <input type="date" th:field="*{dateSubmitted}">
+    <br>
+    Content: <textarea th:field="*{content}"></textarea>
+    <br>
+    <a th:href="@{/blog}">Back</a>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
