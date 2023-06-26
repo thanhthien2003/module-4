@@ -10,13 +10,16 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
+
 @Repository
-public interface IBlogRepository extends JpaRepository<Blog,Integer> {
+public interface IBlogRepository extends JpaRepository<Blog, Integer> {
     Page<Blog> findAll(Pageable pageable);
+
     @Query(value = "SELECT * FROM blog as b WHERE b.title like concat('%',:title,'%')", nativeQuery = true)
-    Page<Blog> findByTitle(Pageable pageable,@Param(value = "title") String title);
+    Page<Blog> findByTitle(Pageable pageable, @Param(value = "title") String title);
+
     @Modifying
     @Transactional
-    @Query(value = "update blog as b set is_flag_delete = 1 where b.id = :id ",nativeQuery = true)
+    @Query(value = "update blog as b set is_flag_delete = 1 where b.id = :id ", nativeQuery = true)
     void isDelete(@Param(value = "id") Integer id);
 }

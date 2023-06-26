@@ -16,7 +16,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @RequestMapping("/category")
 public class CategoryControler {
     @Autowired
-    ICategoryService categoryService;
+    private ICategoryService categoryService;
 
     @GetMapping("")
     public String getList(Model model) {

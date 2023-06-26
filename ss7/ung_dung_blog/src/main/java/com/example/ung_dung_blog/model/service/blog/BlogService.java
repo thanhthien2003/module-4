@@ -40,6 +40,6 @@ public class BlogService implements IBlogService {
 
     @Override
     public Page<Blog> findByTitle(Pageable pageable, String title) {
-        return blogRepository.findByTitle(pageable,title);
+        return blogRepository.findByTitle(pageable, title);
     }
 }
