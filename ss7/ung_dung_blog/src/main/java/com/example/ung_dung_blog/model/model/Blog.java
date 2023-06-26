@@ -13,7 +13,7 @@ public class Blog {
     @Column(nullable = false, columnDefinition = "LongText")
     private String content;
     @ManyToOne
-    @JoinColumn(name = "blog_category_id", nullable = false)
+    @JoinColumn(name = "category_id",referencedColumnName = "id")
     private Category category;
     private boolean isFlagDelete;
 

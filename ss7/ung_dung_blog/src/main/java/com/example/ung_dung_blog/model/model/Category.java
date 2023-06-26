@@ -9,7 +9,7 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "name", unique = true, nullable = false)
+    @Column(name = "name")
     private String name;
     @OneToMany(mappedBy = "category")
     private List<Blog> blogList;
@@ -23,7 +23,7 @@ public class Category {
         this.blogList = blogList;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
