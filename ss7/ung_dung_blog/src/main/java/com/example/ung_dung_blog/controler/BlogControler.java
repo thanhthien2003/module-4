@@ -21,7 +21,7 @@ public class BlogControler {
     private ICategoryService categoryService;
 
     @GetMapping("")
-    public String getList(@PageableDefault(size = 2, sort = "dateSubmitted", direction = Sort.Direction.ASC)
+    public String getList(@PageableDefault(size = 3, sort = "dateSubmitted", direction = Sort.Direction.ASC)
                           Pageable pageable, Model model) {
         model.addAttribute("blogList", blogService.findAll(pageable));
         return "list";
@@ -73,9 +73,14 @@ public class BlogControler {
 
     @PostMapping("/delete")
     public String delete(@ModelAttribute Blog blog, RedirectAttributes redirectAttributes) {
-        blogService.deleteBlog(blog);
-        redirectAttributes.addFlashAttribute("msg", "delete success");
-        return "redirect:/blog";
+        if (blogService.detailBlog(blog.getId()) == null) {
+            redirectAttributes.addFlashAttribute("msg", "not fount by id");
+            return "redirect:/blog";
+        } else {
+            blogService.deleteBlog(blog);
+            redirectAttributes.addFlashAttribute("msg", "delete success");
+            return "redirect:/blog";
+        }
     }
 
     @GetMapping("/detail/{id}")
@@ -90,7 +95,7 @@ public class BlogControler {
     }
 
     @GetMapping("/search")
-    private String search(@PageableDefault(size = 2, sort = "id", direction = Sort.Direction.ASC)
+    private String search(@PageableDefault(size = 3, sort = "id", direction = Sort.Direction.ASC)
                           Pageable pageable, Model model, @RequestParam("title") String title) {
         model.addAttribute("blogList", blogService.findByTitle(pageable, title));
         return "list";

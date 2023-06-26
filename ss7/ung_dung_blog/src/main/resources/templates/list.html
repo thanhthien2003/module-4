@@ -34,7 +34,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="blog, iterStats : ${blogList}" th:if="${blog.isFlagDelete()}">
+    <tr th:each="blog, iterStats : ${blogList}" th:if="${!blog.isFlagDelete()}">
         <td th:text="${iterStats.count}"></td>
         <td th:text="${blog.getTitle()}"></td>
         <td th:text="${blog.getHeading()}"></td>

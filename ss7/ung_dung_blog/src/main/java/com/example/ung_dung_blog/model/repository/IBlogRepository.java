@@ -16,6 +16,6 @@ public interface IBlogRepository extends JpaRepository<Blog,Integer> {
     Page<Blog> findByTitle(Pageable pageable,@Param(value = "title") String title);
     @Modifying
     @Transactional
-    @Query(value = "update blog as b set is_flag_delete = 0 where b.id = :id ",nativeQuery = true)
+    @Query(value = "update blog as b set is_flag_delete = 1 where b.id = :id ",nativeQuery = true)
     void isDelete(@Param(value = "id") Integer id);
 }
