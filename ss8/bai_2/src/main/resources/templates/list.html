@@ -1,10 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>List Music</title>
 </head>
 <body>
-adada
+<a th:href="@{/create}">Create Music</a>
+<p>
+<div th:if="${msg!=null}" th:text="${msg}"></div>
+</p>
+<table>
+    <thead>
+    <th>STT</th>
+    <th>Name music</th>
+    <th>Singer</th>
+    <th>StyleMusic</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    </thead>
+    <tbody>
+    <tr th:each="music,iterStats : ${musicList}" th:if="${!music.isFlagDelete()}">
+        <td th:text="${iterStats.count}"></td>
+        <td th:text="${music.getName()}"></td>
+        <td th:text="${music.getSinger()}"></td>
+        <td th:text="${music.getStyleMusic()}"></td>
+        <td>
+            <a th:href="@{/update/{id}(id=${music.getId()})}">
+                <button>Update</button>
+            </a>
+        </td>
+        <td>
+            <a th:href="@{/delete/{id}(id=${music.getId()})}">
+                <button>Delete</button>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

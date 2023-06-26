@@ -10,6 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 public interface IMusicRepository extends JpaRepository<Music,Integer> {
     @Modifying
     @Transactional
-    @Query(value = "update music as b set is_flag_delete = 1 where b.id = :id ", nativeQuery = true)
+    @Query(value = "update music as m set is_flag_delete = 1 where m.id = :id ", nativeQuery = true)
     void isDelete(@Param(value = "id") Integer id);
 }
