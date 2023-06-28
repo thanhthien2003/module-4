@@ -32,14 +32,18 @@ public class BookService implements IBookService {
     }
 
     @Override
-    public void borrow(Integer id) {
+    public boolean borrow(Integer id) {
         for (Book b: bookRepository.findAll()) {
             if (id== b.getId()){
                 b.setQuantity(b.getQuantity()-1);
+                if (b.getQuantity()<0){
+                    return false;
+                }
                 bookRepository.save(b);
                 break;
             }
         }
+        return true;
     }
 
     @Override

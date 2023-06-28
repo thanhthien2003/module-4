@@ -9,6 +9,6 @@ public interface IBookService {
     void save(Book book);
     void delete(Book book);
     Book findById(Integer id);
-    void borrow(Integer id);
+    boolean borrow(Integer id);
     void giveBack(Integer id);
 }

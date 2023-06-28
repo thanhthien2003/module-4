@@ -5,10 +5,13 @@
     <title>Give back book</title>
 </head>
 <body>
+<div th:if="${msg}">
+    <p th:text="${msg}"></p>
+</div>
 <form th:action="@{/giveBack}" method="post">
     Id book you borrow: <input type="number" th:name="idBook" th:value="${idBook}" readonly>
     <br>
-    Enter your code borrow: <input type="number" th:name="code">
+    Enter your code borrow: <input type="text" th:name="code">
     <br>
     <button type="submit">Accept Give back</button>
     <a th:href="@{/}">Back</a>
