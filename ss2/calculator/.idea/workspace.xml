@@ -4,7 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d15dce4e-64d8-4ebc-b387-5bf6c1c9fcc3" name="Changes" comment="" />
+    <list default="true" id="d15dce4e-64d8-4ebc-b387-5bf6c1c9fcc3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../ss8/demo/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss8/demo/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss8/demo/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss8/demo/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss8/demo/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss8/demo/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss8/demo/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss8/demo/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss8/demo/src/main/java/com/example/demo/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss8/demo/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss8/demo/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/java/com/example/book_app/BookAppApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/java/com/example/book_app/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/java/com/example/book_app/controler/BookControler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/java/com/example/book_app/controler/OrderControler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/java/com/example/book_app/model/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/java/com/example/book_app/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/java/com/example/book_app/repository/IBookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/java/com/example/book_app/repository/IOrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/java/com/example/book_app/service/IBookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/java/com/example/book_app/service/IOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/java/com/example/book_app/service/impl/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/java/com/example/book_app/service/impl/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/resources/templates/borrow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/resources/templates/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9/book_app/src/test/java/com/example/book_app/BookAppApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +113,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Codegym/Module4/module-4/ss1/ung_dung_tu_dien",
+    "last_opened_file_path": "D:/Codegym/Module4/module-4/ss7/ung_dung_blog",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -192,6 +230,7 @@
       <workItem from="1686985710233" duration="781000" />
       <workItem from="1686986579540" duration="27000" />
       <workItem from="1687144780930" duration="1266000" />
+      <workItem from="1687943478751" duration="1361000" />
     </task>
     <servers />
   </component>
