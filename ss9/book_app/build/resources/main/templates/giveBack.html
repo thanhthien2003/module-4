@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Give back book</title>
+</head>
+<body>
+<form th:action="@{/giveBack}" method="post">
+    Id book you borrow: <input type="number" th:name="idBook" th:value="${idBook}" readonly>
+    <br>
+    Enter your code borrow: <input type="number" th:name="code">
+    <br>
+    <button type="submit">Accept Give back</button>
+    <a th:href="@{/}">Back</a>
+</form>
+</body>
+</html>
