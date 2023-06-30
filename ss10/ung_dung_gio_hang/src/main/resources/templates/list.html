@@ -44,6 +44,9 @@
 <body>
 <div class="container">
     <p><a href="/cart" class="btn btn-primary">Your cart</a></p>
+    <p>
+    <div th:if="${msg!=null}" th:text="${msg}"></div>
+    </p>
     <h1>Shop</h1>
     <table class="table table-striped">
         <thead>
