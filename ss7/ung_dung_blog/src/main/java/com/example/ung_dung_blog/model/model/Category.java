@@ -11,16 +11,16 @@ public class Category {
     private Integer id;
     @Column(name = "name")
     private String name;
-    @OneToMany(mappedBy = "category")
-    private List<Blog> blogList;
+//    @OneToMany(mappedBy = "category")
+//    private List<Blog> blogList;
 
     public Category() {
     }
 
-    public Category(Integer id, String name, List<Blog> blogList) {
+    public Category(Integer id, String name) {
         this.id = id;
         this.name = name;
-        this.blogList = blogList;
+//        this.blogList = blogList;
     }
 
     public Integer getId() {
@@ -39,11 +39,11 @@ public class Category {
         this.name = name;
     }
 
-    public List<Blog> getBlogList() {
-        return blogList;
-    }
-
-    public void setBlogList(List<Blog> blogList) {
-        this.blogList = blogList;
-    }
+//    public List<Blog> getBlogList() {
+//        return blogList;
+//    }
+//
+//    public void setBlogList(List<Blog> blogList) {
+//        this.blogList = blogList;
+//    }
 }
