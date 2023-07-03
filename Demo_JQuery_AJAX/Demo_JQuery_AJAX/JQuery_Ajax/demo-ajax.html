@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo JQuery & Ajax</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    #
+                </th>
+                <th>
+                    Username
+                </th>
+                <th>
+                    Roles
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody id="listUsers"></tbody>
+    </table>
+    <hr/>
+    <form>
+        <input placeholder="username" name="username" id="username" />
+        <select id="roles">
+            <option value="1">ADMIN</option>
+            <option value="2">STUDENTS</option>
+        </select>
+        <button type="button" onclick="onCreateUser()">Submit</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function onCreateUser() {
+            const username = $("#username").val();
+            const roleId = $("#roles").val();
+            const user = {
+                username: username, roles: [{id: +roleId}]
+            }
+            $.ajax({
+                url: 'http://localhost:8080/users',
+                type: 'POST',
+                data: JSON.stringify(user),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                success: function() {
+                    getListUsers();
+                },
+                error: function(error) {
+                    console.error(error);
+                }
+            })
+        }
+
+        function getListUsers() {
+            $.ajax({
+                url: 'http://localhost:8080/users',
+                type: 'GET',
+                success: function (data) {
+                    console.log(JSON.stringify(data));
+                    let userStr = '';
+
+                    for (let user of data) {
+                        userStr += `
+                    <tr>
+                        <td>${user.id}</td>
+                        <td>${user.username}</td>
+                        <td>${user.roles.map(r => r.name).join(", ")}</td>
+                        <td><button type="button" onclick="deleteUser(${user.id})">Delete</button></td>
+                    </tr>
+                
+                `;
+                    }
+
+                    $("#listUsers").html(userStr);
+                },
+                error: function (error) {
+                    // TODO 
+                }
+            });
+        }
+
+        function deleteUser(id) {
+            $.ajax({
+                url: 'http://localhost:8080/users/' + id,
+                type: 'DELETE',
+                success: function () {
+                    getListUsers();
+                },
+                error: function (error) {
+                    // TODO 
+                }
+            })
+        }
+
+        $(document).ready(function () {
+            getListUsers();
+        })
+    </script>
+</body>
+</html>

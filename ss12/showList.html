@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show list</title>
+</head>
+<body>
+<form>
+    Enter your Title Blog : <input type="text" name="title" id="title">
+    <button type="button" onclick="findBlog()">Search</button>
+</form>
+<table>
+    <thead>
+    <th>STT</th>
+    <th>Title</th>
+    <th>Heading</th>
+    <th>Date Submitted</th>
+    <th>Content</th>
+    <td> Category</td>
+    <td>Delete</td>
+    <th>Edit</th>
+    </thead>
+    <tbody id="showList"></tbody>
+</table>
+<button id="loadMore">More</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    let count = 0;
+    let limit = 20;
+
+    function showList() {
+        $.ajax({
+            url: 'http://localhost:8080/blog',
+            type: 'GET',
+            data: {
+                _start: count,
+                _limit: limit
+            },
+            success: function (data) {
+                let blogStr = '';
+                for (let blog of data.slice(count, count + limit)) {
+                    blogStr += `
+                <tr>
+                    <td>${blog.id}</td>
+                    <td>${blog.title}</td>
+                    <td>${blog.heading}</td>
+                    <td>${blog.dateSubmitted}</td>
+                    <td>${blog.content}</td>
+                    <td>${blog.category.name}</td>
+                    <td><button type="button" onclick="deleteBlog(${blog.id})">Delete</button></td>
+                    <td><button type="button" onclick="editBlog(${blog.id})">Edit</button></td>
+                </tr>
+                    `;
+                }
+                if (count >= data.length) {
+                    "#loadMore".style.display = 'none';
+                }
+                $("#showList").append(blogStr);
+                count += limit;
+            },
+            error: function (error) {
+                console.log("Not found")
+            }
+        });
+    }
+
+    function findBlog() {
+        const nameBlog = $("#title").val();
+        $.ajax({
+            url: 'http://localhost:8080/blog/search/' + nameBlog,
+            type: 'GET',
+            success: function (data) {
+                let blogStr = '';
+                for (let blog of data) {
+                    blogStr += `
+                <tr>
+                    <td>${blog.id}</td>
+                    <td>${blog.title}</td>
+                    <td>${blog.heading}</td>
+                    <td>${blog.dateSubmitted}</td>
+                    <td>${blog.content}</td>
+                    <td>${blog.category.name}</td>
+                    <td><button type="button" onclick="deleteBlog(${blog.id})">Delete</button></td>
+                    <td><button type="button" onclick="editBlog(${blog.id})">Edit</button></td>
+                </tr>
+                    `;
+                }
+                $("#showList").html(blogStr);
+            },
+            error: function (error) {
+            }
+        })
+    }
+
+    $(document).ready(function () {
+        showList();
+    })
+    $("#loadMore").on("click", function () {
+        showList();
+    })
+</script>
+</body>
+</html>

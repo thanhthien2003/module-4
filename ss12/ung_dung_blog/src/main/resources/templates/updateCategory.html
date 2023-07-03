@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update category</title>
+</head>
+<body>
+<form th:action="@{/category/update}" method="post" th:object="${category}">
+    <input type="text" th:field="*{id}" hidden>
+    Name: <input type="text" th:field="*{name}">
+    <br>
+    <a th:href="@{/blog}">Back</a>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

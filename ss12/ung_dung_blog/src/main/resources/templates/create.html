@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+<form th:action="@{/blog/create}" method="post" th:object="${blog}">
+    Title: <input type="text" th:field="*{title}">
+    <br>
+    Heading: <input type="text" th:field="*{heading}">
+    <br>
+    Date Submitted: <input type="date" th:field="*{dateSubmitted}">
+    <br>
+    Content: <textarea th:field="*{content}"></textarea>
+    <br>
+    Danh mục:
+    <select id="category" th:field="*{category}">
+        <option th:each="category : ${categorys}"
+                th:text="${category.name}" th:value="${category.id}">
+        </option>
+    </select>
+    <br>
+    <a th:href="@{/blog}">Back</a>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo JQuery & Ajax</title>
+</head>
+
+<body>
+    <div id="title"></div>
+    <button type="button" id="clickMe">CLICK ME</button>
+    <!-- <script>
+        document.getElementById("title").innerText = "Hello world";
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+        integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script>
+        // $("#title").text('Hello world');
+        $("#title").html('<h1>Hello world</h1>');
+        $("#clickMe").click(function () {
+            alert("CLICKED ME!!");
+        })
+    </script>
+</body>
+
+</html>
