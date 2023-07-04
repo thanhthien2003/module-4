@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css" integrity="sha512-2+5kO7hT7tN9l+GbGY2z+6yJ4R0PEyvL0UjI9WxXfGxW14j1hGf8cQHs2A4mFtT1phRmrrBq2d+T8to6kUtZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+        h1, h3 {
+            color: #444;
+            text-align: center;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #fff;
+            border-bottom: none;
+        }
+        .card-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+        .form-control {
+            border-radius: 30px;
+            font-size: 1.2rem;
+        }
+        .btn-primary {
+            background-color: #6c63ff;
+            border-color: #6c63ff;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .btn-primary:hover {
+            background-color: #4f47d7;
+            border-color: #4f47d7;
+        }
+        .form-check-label {
+            font-size: 1.1rem;
+        }
+        .form-check-input:checked {
+            background-color: #6c63ff;
+            border-color: #6c63ff;
+        }
+        .form-check-input:checked:focus {
+            background-color: #4f47d7;
+            border-color: #4f47d7;
+        }
+    </style>
+</head>
+<body>
+<!-- Include _menu.html -->
+<th:block th:include="/_menu"></th:block>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="card-title">Login</h1>
+                </div>
+                <div class="card-body">
+                    <form class="login-form" name="f" th:action="@{/j_spring_security_check}" method="POST">
+                        <div class="mb-3">
+                            <label class="form-label" for="username">Username</label>
+                            <input class="form-control" type="text" id="username" name="username" placeholder="Enter your username">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-control" type="password" id="password" name="password" placeholder="Enter your password">
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="remember-me" name="remember-me">
+                                <label class="form-check-label" for="remember-me">Remember Me</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" name="submit" type="submit">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js" integrity="sha512-9s8zGq9fw4r6xqy9fZFQ5xLQpWY8W2aEaU2sFqz4gOY3JvJbF+Q6Z2bUJxMAz6k2eQ7P3hZPJyXpbv1XhR0oCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
